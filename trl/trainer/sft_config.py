@@ -250,6 +250,10 @@ class SFTConfig(_BaseConfig):
             )
         },
     )
+    eaft_alpha: float = field(
+        default=1.0,
+        metadata={"help": "The alpha parameter for EAFT loss to control the power of adaptive weight."},
+    )
     activation_offloading: bool = field(
         default=False,
         metadata={"help": "Whether to offload the activations to the CPU."},
